@@ -37,6 +37,10 @@ In your git commit message:
 }
 ```
 
+# Todo
+
+- [ ] Support cross repo issues
+
 ## References
 
 Inspired by [deoplete-github](https://github.com/SevereOverfl0w/deoplete-github)
