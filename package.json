@@ -1,40 +1,61 @@
 {
-    "name": "coc-github",
-    "version": "1.0.0",
-    "description": "github issue source for coc.nvim",
-    "main": "lib/index.js",
-    "scripts": {
-        "clean": "rimraf lib",
-        "build": "tsc -p tsconfig.json",
-        "prepare": "npx npm-run-all clean build"
-    },
-    "repository": "https://github.com/voldikss/coc-github",
-    "keywords": [
-        "coc.nvim",
-        "github"
-    ],
-    "files": [
-        "src",
-        "lib"
-    ],
-    "author": "voldikss",
-    "license": "MIT",
-    "engines": {
-        "coc": "^0.0.67"
-    },
-    "bugs": {
-        "url": "https://github.com/voldikss/coc-github/issues"
-    },
-    "devDependencies": {
-        "@types/node": "^11.13.8",
-        "@types/request": "^2.48.1",
-        "@types/which": "^1.3.1",
-        "coc.nvim": "^0.0.67",
-        "rimraf": "^2.6.3",
-        "typescript": "^3.4.5"
-    },
-    "homepage": "https://github.com/voldikss/coc-github/#readme",
-    "dependencies": {
-        "request": "^2.88.0"
+  "name": "coc-github",
+  "version": "1.0.0",
+  "description": "github issue source for coc.nvim",
+  "keywords": [
+    "coc.nvim",
+    "github"
+  ],
+  "main": "lib/index.js",
+  "engines": {
+    "coc": "^0.0.67"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npx npm-run-all clean build"
+  },
+  "files": [
+    "src",
+    "lib"
+  ],
+  "author": "voldikss",
+  "repository": "https://github.com/voldikss/coc-github",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/voldikss/coc-github/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.8",
+    "@types/request": "^2.48.1",
+    "@types/which": "^1.3.1",
+    "coc.nvim": "^0.0.67",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.4.5"
+  },
+  "homepage": "https://github.com/voldikss/coc-github/#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "coc.github.enable": {
+          "type": "boolean",
+          "default": true
+        },
+        "coc.github.priority": {
+          "type": "number",
+          "default": 99
+        },
+        "coc.github.filetypes": {
+          "type": "array",
+          "default": [
+            "gitcommit"
+          ]
+        }
+      }
     }
+  }
 }

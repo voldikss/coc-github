@@ -1,14 +1,25 @@
-import { sources, ExtensionContext, ISource, SourceType } from 'coc.nvim'
+import { sources, ExtensionContext, SourceConfig, workspace } from 'coc.nvim'
 import request from 'request'
 import * as child from 'child_process'
 
 export async function activate(context: ExtensionContext): Promise<void> {
-  let source: ISource = {
+  let config = workspace.getConfiguration('coc.github')
+  let enable = config.get<boolean>('enable', true)
+
+  if (!enable) {
+    return
+  }
+
+  let priority = config.get<number>('priority', 99)
+  let filetypes = config.get<Array<string>>('filetypes', ['gitcommit'])
+
+  let source: SourceConfig = {
     name: 'github',
     enable: true,
-    filetypes: ['gitcommit'],
-    priority: 99,
-    sourceType: SourceType.Service,
+    shortcut: "I",
+    filetypes: filetypes,
+    priority: priority,
+    sourceType: 2,
     triggerCharacters: ['#'],
     doComplete: async function () {
       const issues = await getIssues()

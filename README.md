@@ -18,9 +18,28 @@ In your git commit message:
 
 - Filter candidates with either issue numbers or issue titles
 
+# Config
+
+```
+"coc.github.enable": {
+    "type": "boolean",
+    "default": true
+},
+"coc.github.priority": {
+    "type": "number",
+    "default": 99
+},
+"coc.github.filetypes": {
+    "type": "array",
+    "default": [
+    "gitcommit"
+    ]
+}
+```
+
 ## References
 
-- Inspired by [deoplete-github](https://github.com/SevereOverfl0w/deoplete-github)
+Inspired by [deoplete-github](https://github.com/SevereOverfl0w/deoplete-github)
 
 ## License
 
