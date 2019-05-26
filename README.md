@@ -20,7 +20,7 @@ In your git commit message:
 
 # Config
 
-```
+```jsonc
 "coc.github.enable": {
     "type": "boolean",
     "default": true
