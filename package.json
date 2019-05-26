@@ -1,6 +1,6 @@
 {
   "name": "coc-github",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "github issue source for coc.nvim",
   "keywords": [
     "coc.nvim",
