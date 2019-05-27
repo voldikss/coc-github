@@ -39,7 +39,11 @@ In your git commit message:
 
 # Todo
 
+- [ ] Use cache to improve the speed
 - [ ] Support cross repo issues
+- [ ] Support private repo
+- [ ] Support GitLab
+- [ ] Support AzureDevOps
 
 ## References
 
