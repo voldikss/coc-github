@@ -4,7 +4,7 @@ Github issue source for [coc.nvim](https://github.com/neoclide/coc.nvim)
 
 **NOTE:**
 
-**[coc-git](https://github.com/neoclide/coc-git) already has this feature included and it provides more other useful functionalities, please use coc-git instead.**
+**[coc-git](https://github.com/neoclide/coc-git) now has this feature included and it provides more other useful functionalities, please use coc-git instead.**
 
 ![](https://user-images.githubusercontent.com/20282795/58370347-0331c400-7f38-11e9-8bb4-9ade97aad37e.png)
 
